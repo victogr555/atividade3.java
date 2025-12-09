@@ -16,7 +16,7 @@ public class Main {
         ZoologicoController zoologicoController = new ZoologicoController(zoologicoDAO, ambienteDAO);
 
         try {
-            Zoologico zoo = new Zoologico("Zoo Central", "São Paulo");
+            Zoologico zoo = new Zoologico("Zoo Central", "Sousa - PB");
             zoologicoController.create(zoo);
 
             Ambiente savana = new Ambiente("Savanna", 3);
@@ -30,7 +30,7 @@ public class Main {
             Peixe nemo = new Peixe("Nemo", "Peixe-palhaço", 1);
 
             ambienteController.addAnimalToAmbiente(savana.getId(), leao);
-            ambienteController.addAnimalToAmbiente(savana.getId(), papagaio); // talvez exótico, mas só exemplo
+            ambienteController.addAnimalToAmbiente(savana.getId(), papagaio); 
             ambienteController.addAnimalToAmbiente(aquario.getId(), nemo);
 
             System.out.println("Zoológico criado: " + zoo);
@@ -57,3 +57,4 @@ public class Main {
         }
     }
 }
+
